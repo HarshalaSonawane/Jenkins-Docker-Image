@@ -1,0 +1,1 @@
+const http = require('http');const PORT = 8080;const server = http.createServer((req, res) => { res.writeHead(200, { 'Content-Type': 'application/json' }); res.end(JSON.stringify({ message: "Hello from Jenkins + Docker", environment: process.env.ENVIRONMENT || "LOCAL" }));});server.listen(PORT, () => { console.log(`Application running on port ${PORT}`);});
